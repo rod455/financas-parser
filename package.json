@@ -1,20 +1,20 @@
 {
   "name": "financas-parser",
   "type": "module",
+  "engines": {
+    "node": ">=18"
+  },
   "scripts": {
-    "dev": "ts-node src/server.ts",
-    "start": "node dist/server.js",
-    "build": "tsc"
+    "build": "tsc",
+    "start": "node dist/server.js"
   },
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.19.2",
-    "multer": "1.4.5-lts.1"
+    "multer": "1.4.5-lts.1",
     "pdfjs-dist": "^4.0.379"
   },
   "devDependencies": {
-    "ts-node": "^10.9.2",
     "typescript": "^5.3.3"
   }
 }
-
