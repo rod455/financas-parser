@@ -1,5 +1,10 @@
 import fs from "fs";
-import * as pdfjs from "pdfjs-dist/legacy/build/pdf.js";
+import { createRequire } from "module";
+
+const require = createRequire(import.meta.url);
+
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const pdfjs = require("pdfjs-dist/legacy/build/pdf.js");
 
 // @ts-ignore
 pdfjs.GlobalWorkerOptions.workerSrc =
@@ -115,4 +120,5 @@ export async function parseSantanderPDF(
     transacoes
   };
 }
+
 
