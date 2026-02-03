@@ -1,7 +1,7 @@
 import express from "express";
 import multer from "multer";
 import cors from "cors";
-import { parseSantanderPDF } from "./pdfParser";
+import { parseSantanderPDF } from "./pdfParser.js";
 
 const upload = multer({ dest: "uploads/" });
 const app = express();
@@ -27,4 +27,5 @@ const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`🚀 Parser rodando na porta ${PORT}`);
 });
+
 
