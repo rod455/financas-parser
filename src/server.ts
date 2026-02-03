@@ -22,10 +22,14 @@ app.get("/health", (_, res) => {
   res.send("OK");
 });
 
+/* 👇 NOVO ENDPOINT AQUI 👇 */
+app.post("/parse-from-github", async (req, res) => {
+  res.json({ message: "Endpoint /parse-from-github funcionando" });
+});
+/* 👆 ATÉ AQUI 👆 */
+
 const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, () => {
   console.log(`🚀 Parser rodando na porta ${PORT}`);
 });
-
-
