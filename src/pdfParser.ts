@@ -2,13 +2,11 @@ import fs from "fs";
 import { createRequire } from "module";
 
 const require = createRequire(import.meta.url);
-
-// eslint-disable-next-line @typescript-eslint/no-var-requires
 const pdfjs = require("pdfjs-dist/legacy/build/pdf.js");
 
-// @ts-ignore
 pdfjs.GlobalWorkerOptions.workerSrc =
   "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js";
+
 
 const LIMITE_COLUNA_X = 300;
 
@@ -120,6 +118,7 @@ export async function parseSantanderPDF(
     transacoes
   };
 }
+
 
 
 
