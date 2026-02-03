@@ -1,6 +1,10 @@
 import fs from "fs";
 import * as pdfjs from "pdfjs-dist/legacy/build/pdf.js";
 
+// @ts-ignore
+pdfjs.GlobalWorkerOptions.workerSrc =
+  "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.0.379/pdf.worker.min.js";
+
 const LIMITE_COLUNA_X = 300;
 
 export interface Transacao {
@@ -111,3 +115,4 @@ export async function parseSantanderPDF(
     transacoes
   };
 }
+
